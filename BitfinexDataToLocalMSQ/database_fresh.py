@@ -1,16 +1,17 @@
 import ccxt
-from DB_Local_utils_load import *
-from GlobalObjects import symbols_usd, coins_picked
+from BitfinexDataToLocalMSQ.DB_Local_utils_load import *
+from BitfinexDataToLocalMSQ.GlobalObjects import symbols_usd, coins_picked
 
 fresh_symbols = [i for i in symbols_usd if i.split('/')[0].lower() in coins_picked[:10]]
+# fresh_symbols = [i for i in symbols_usd]
 
 pd.set_option('expand_frame_repr', False)
 pd.set_option('max_rows', 20)
 
 bitfinex = ccxt.bitfinex({'timeout': 1000})
 
-db_title = 'cc_bitfinex_top10_hd'
-timeframe = '1h'
+db_title = 'cc_bitfinex_hd'
+timeframe = '1m'
 db_name = '_'.join([db_title, timeframe])
 db_con, db_name_new = local_fresh_db_con(db_name_title=db_name)
 time_sh_utc_hours_diff = 8

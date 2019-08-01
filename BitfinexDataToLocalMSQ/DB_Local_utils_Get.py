@@ -6,7 +6,7 @@ pd.set_option('max_rows', 20)
 
 
 def DB_get_one_field_all(db_name='cc_bitfinex_hd_1d', field='close', indextostr=True, indextostrdigits=10):
-    engine = create_engine(f'mysql://root:123456@localhost/{db_name}')
+    engine = create_engine(f'mysql://fanjun:123456@192.168.1.154/{db_name}')
     inspector = inspect(engine)
     list_table = inspector.get_table_names()
     list_table.sort()
@@ -24,7 +24,7 @@ def DB_get_one_field_all(db_name='cc_bitfinex_hd_1d', field='close', indextostr=
 
 
 def DB_get_one_field_forList(db_name, field, coin_list, indextostr=True, indextostrdigits=10):
-    engine = create_engine(f'mysql://root:123456@localhost/{db_name}')
+    engine = create_engine(f'mysql://fanjun:123456@192.168.1.154/{db_name}')
     inspector = inspect(engine)
     list_table = inspector.get_table_names()
     list_table.sort()
@@ -43,7 +43,7 @@ def DB_get_one_field_forList(db_name, field, coin_list, indextostr=True, indexto
 
 
 def DB_get_usd_AMT_all(db_name='cc_bitfinex_hd_1d', indextostr=True, indextostrdigits=10):
-    engine = create_engine(f'mysql://root:123456@localhost/{db_name}')
+    engine = create_engine(f'mysql://fanjun:123456@192.168.1.154/{db_name}')
     inspector = inspect(engine)
     list_table = inspector.get_table_names()
     list_table.sort()
@@ -63,7 +63,7 @@ def DB_get_usd_AMT_all(db_name='cc_bitfinex_hd_1d', indextostr=True, indextostrd
 
 
 def DB_get_usd_AMT_forList(db_name, coin_list, indextostr=True, indextostrdigits=10):
-    engine = create_engine(f'mysql://root:123456@localhost/{db_name}')
+    engine = create_engine(f'mysql://fanjun:123456@192.168.1.154/{db_name}')
     inspector = inspect(engine)
     list_table = inspector.get_table_names()
     list_table.sort()

@@ -10,7 +10,7 @@ def local_db_exists(db_name):
     :param db_name: str
     :return: bool
     '''
-    check_engine = create_engine('mysql://root:123456@localhost')
+    check_engine = create_engine(f'mysql://fanjun:123456@192.168.1.154')
     try:
         check_engine.execute(f"use {db_name}")
         return True
@@ -24,8 +24,8 @@ def local_fresh_db_con(db_name_title):
     :param db_name_title: str
     :return: [一个指向新建好的数据库的 sqlalchemy 链接，新数据名字字符串]
     '''
-    db_name = db_name_title + '_' + str(datetime.datetime.now())[:10].replace('-', '_')
-    engine = create_engine('mysql://root:123456@localhost')
+    db_name = db_name_title  # + '_' + str(datetime.datetime.now())[:10].replace('-', '_')
+    engine = create_engine(f'mysql://fanjun:123456@192.168.1.154')
     if local_db_exists(db_name=db_name):
         engine.execute(f"drop database {db_name}")
         engine.execute(f"create database {db_name}")
@@ -146,7 +146,7 @@ def local_table_update(exchange, symbol, timeframe, db_name, time_sh_utc_hours_d
     :return: 此函数会将symbol交易对在当前时间前两天之前的所有历史数据进行更新，即下载目前未下载到的数据并且保存到本地的mysql数据库，直到出现网络异常或者下载完全之后停止。
     '''
     name_table = ('_'.join(symbol.split('/')) + '_' + timeframe).lower()
-    engine = create_engine('mysql://root:123456@localhost')
+    engine = create_engine(f'mysql://fanjun:123456@192.168.1.154')
     engine.execute(f"use {db_name}")
     db_date = str(datetime.datetime.now() - pd.Timedelta(days=2))[:10]
     stop = 0

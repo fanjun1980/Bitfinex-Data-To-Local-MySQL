@@ -1,6 +1,6 @@
 import pandas as pd
-from DB_Local_utils_Get import *
-from GlobalObjects import print_list
+from BitfinexDataToLocalMSQ.DB_Local_utils_Get import *
+from BitfinexDataToLocalMSQ.GlobalObjects import print_list
 
 pd.set_option('expand_frame_repr', False)
 pd.set_option('max_rows', 20)

@@ -1,0 +1,4 @@
+conda install sqlalchemy
+conda install mysqlclient
+python -m pip install --upgrade pip
+pip install pandas --upgrade
