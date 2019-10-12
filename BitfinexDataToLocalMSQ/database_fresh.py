@@ -2,6 +2,11 @@ import ccxt
 from BitfinexDataToLocalMSQ.DB_Local_utils_load import *
 from BitfinexDataToLocalMSQ.GlobalObjects import symbols_usd, coins_picked
 
+'''
+database_fresh.py 会创建一个新的数据库，后缀为K线周期，然后将需要下载数据的交易对的历史数据下载到这个数据库中，
+这些交易对名称存在列表变量fresh_symbols中，每个交易对的K线数据在一张表中，表的命名规范见上一条，
+为了不让新创建的数据库覆盖掉之前的数据库，新库库名后面会加上当日的字符串（库创建好之后库名可以修改）。
+'''
 fresh_symbols = [i for i in symbols_usd if i.split('/')[0].lower() in coins_picked[:10]]
 # fresh_symbols = [i for i in symbols_usd]
 

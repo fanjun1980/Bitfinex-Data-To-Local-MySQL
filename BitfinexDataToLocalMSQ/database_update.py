@@ -2,6 +2,11 @@ import ccxt
 from BitfinexDataToLocalMSQ.DB_Local_utils_load import *
 from BitfinexDataToLocalMSQ.GlobalObjects import symbols_usd
 
+'''
+database_update.py 会在本地MySQL的指定数据库db_name_update中将需要更新的交易对数据进行更新，
+其中需要更新的交易对存放在列表变量update_symbols中，
+对于其中的每一个交易对，程序会找到最后一条K线时间点，然后从这里接着下载接下来的数据并将其接入这张表中。
+'''
 update_symbols = symbols_usd
 
 pd.set_option('expand_frame_repr', False)

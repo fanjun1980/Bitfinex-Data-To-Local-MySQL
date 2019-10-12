@@ -36,5 +36,5 @@ export_h5('cc_bitfinex_hd_1m', 'eos_usd_1m')
 export_csv('cc_bitfinex_hd_1m', 'eth_usd_1m')
 export_h5('cc_bitfinex_hd_1m', 'eth_usd_1m')
 
-export_csv('cc_bitfinex_hd_1m', 'xrp_usd_1m')
-export_h5('cc_bitfinex_hd_1m', 'xrp_usd_1m')
+# export_csv('cc_bitfinex_hd_1m', 'xrp_usd_1m')
+# export_h5('cc_bitfinex_hd_1m', 'xrp_usd_1m')
