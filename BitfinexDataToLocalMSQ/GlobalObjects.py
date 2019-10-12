@@ -34,8 +34,7 @@ symbols_usd = ['ABYSS/USD', 'AGI/USD', 'AID/USD', 'AION/USD', 'ALG/USD', 'AMPL/U
 
 # coins_picked = ['btc', 'eth', 'eos', 'xrp', 'ltc', 'neo', 'etc', 'iota', 'bchabc', 'dash', 'bchsv', 'xmr', 'zec',
 #                 'omg', 'mgo', 'trx', 'btg', 'zrx', 'etp', 'xlm']
-coins_picked = ['btc', 'eth', 'eos', 'ltc', 'xrp', 'bch', 'usdt', 'neo', 'bsv', 'iota', 'leo', 'etc', 'dash', 'zec',
-                'xmr', 'omg', 'usdc', 'btg', 'etp', 'trx', 'zrx', 'mgo', 'ampl', 'dai', 'xlm', 'rrb', 'edo', 'xtz']
+coins_picked = ['btc', 'eth', 'eos', 'ltc', 'xrp', 'bch', 'neo', 'bsv', 'iota', 'leo', 'etc']
 
 
 def print_list(inputList):
