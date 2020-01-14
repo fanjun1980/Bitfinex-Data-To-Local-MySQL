@@ -148,7 +148,10 @@ def local_table_update(exchange, symbol, timeframe, db_name, time_sh_utc_hours_d
     name_table = ('_'.join(symbol.split('/')) + '_' + timeframe).lower()
     engine = create_engine(f'mysql://fanjun:123456@192.168.1.154')
     engine.execute(f"use {db_name}")
-    db_date = str(datetime.datetime.now() - pd.Timedelta(days=2))[:10]
+    if timeframe[-1] == 'm':
+        db_date = str(datetime.datetime.now() - pd.Timedelta(minutes=10))
+    else:
+        db_date = str(datetime.datetime.now() - pd.Timedelta(days=2))
     stop = 0
     while True:
         if stop >= 2:
@@ -158,7 +161,7 @@ def local_table_update(exchange, symbol, timeframe, db_name, time_sh_utc_hours_d
             record_last = pd.read_sql(sql=query, con=engine).sort_values(by=['time'], ascending=True)
             time_last = str(record_last['time'].iloc[-1])
             print(f'loading {symbol} {timeframe} {time_last}')
-            if time_last[:10] >= db_date:
+            if time_last >= db_date:
                 break
             time_delta = cal_time_delta(timeframe=timeframe)
             data_new = run_function_till_success(function=lambda: ccxt_fetch_continue_k_data(exchange=exchange, symbol=symbol, timeframe=timeframe, start_time_str=str(pd.to_datetime(time_last) + time_delta), time_sh_utc_hours_diff=time_sh_utc_hours_diff, limit=1000), tryTimes=5, sleepTimes=1)[0]
