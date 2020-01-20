@@ -39,11 +39,11 @@ export_h5('cc_bitfinex_hd_1m', 'eth_usd_1m', 'eth_usd_1m_20170101_20200120')
 export_csv('cc_bitfinex_hd_1m', 'bch_usd_1m', 'bch_usd_1m_20170101_20200120')
 export_h5('cc_bitfinex_hd_1m', 'bch_usd_1m', 'bch_usd_1m_20170101_20200120')
 
-export_csv('cc_bitfinex_hd_1m', 'bsv_usd_1m', 'bch_usd_1m_20170101_20200120')
-export_h5('cc_bitfinex_hd_1m', 'bsv_usd_1m', 'bch_usd_1m_20170101_20200120')
+export_csv('cc_bitfinex_hd_1m', 'bsv_usd_1m', 'bsv_usd_1m_20170101_20200120')
+export_h5('cc_bitfinex_hd_1m', 'bsv_usd_1m', 'bsv_usd_1m_20170101_20200120')
 
 export_csv('cc_bitfinex_hd_1m', 'ltc_usd_1m', 'ltc_usd_1m_20170101_20200120')
 export_h5('cc_bitfinex_hd_1m', 'ltc_usd_1m', 'ltc_usd_1m_20170101_20200120')
 
-export_csv('cc_bitfinex_hd_1m', 'xrp_usd_1m', 'xrp_usd_1m_20170101_20200114')
-export_h5('cc_bitfinex_hd_1m', 'xrp_usd_1m', 'xrp_usd_1m_20170101_20200114')
+export_csv('cc_bitfinex_hd_1m', 'xrp_usd_1m', 'xrp_usd_1m_20170101_20200120')
+export_h5('cc_bitfinex_hd_1m', 'xrp_usd_1m', 'xrp_usd_1m_20170101_20200120')
