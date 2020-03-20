@@ -27,23 +27,32 @@ def export_h5(db_name, name_table, name_file):
     record_last.to_hdf(f'e:/{name_file}.h5', key='all_data', mode='w')
 
 
-export_csv('cc_bitfinex_hd_1m', 'btc_usd_1m', 'btc_usd_1m_20170101_20200120')
-export_h5('cc_bitfinex_hd_1m', 'btc_usd_1m', 'btc_usd_1m_20170101_20200120')
+export_csv('cc_bitfinex_hd_1m', 'btc_usd_1m', 'btc_usd_1m_20170101_20200319')
+export_h5('cc_bitfinex_hd_1m', 'btc_usd_1m', 'btc_usd_1m_20170101_20200319')
 
-export_csv('cc_bitfinex_hd_1m', 'eos_usd_1m', 'eos_usd_1m_20170101_20200120')
-export_h5('cc_bitfinex_hd_1m', 'eos_usd_1m', 'eos_usd_1m_20170101_20200120')
+export_csv('cc_bitfinex_hd_1m', 'eos_usd_1m', 'eos_usd_1m_20170101_20200319')
+export_h5('cc_bitfinex_hd_1m', 'eos_usd_1m', 'eos_usd_1m_20170101_20200319')
 
-export_csv('cc_bitfinex_hd_1m', 'eth_usd_1m', 'eth_usd_1m_20170101_20200120')
-export_h5('cc_bitfinex_hd_1m', 'eth_usd_1m', 'eth_usd_1m_20170101_20200120')
+export_csv('cc_bitfinex_hd_1m', 'eth_usd_1m', 'eth_usd_1m_20170101_20200319')
+export_h5('cc_bitfinex_hd_1m', 'eth_usd_1m', 'eth_usd_1m_20170101_20200319')
 
-export_csv('cc_bitfinex_hd_1m', 'bch_usd_1m', 'bch_usd_1m_20170101_20200120')
-export_h5('cc_bitfinex_hd_1m', 'bch_usd_1m', 'bch_usd_1m_20170101_20200120')
+export_csv('cc_bitfinex_hd_1m', 'bch_usd_1m', 'bch_usd_1m_20170101_20200319')
+export_h5('cc_bitfinex_hd_1m', 'bch_usd_1m', 'bch_usd_1m_20170101_20200319')
 
-export_csv('cc_bitfinex_hd_1m', 'bsv_usd_1m', 'bsv_usd_1m_20170101_20200120')
-export_h5('cc_bitfinex_hd_1m', 'bsv_usd_1m', 'bsv_usd_1m_20170101_20200120')
+export_csv('cc_bitfinex_hd_1m', 'bsv_usd_1m', 'bsv_usd_1m_20170101_20200319')
+export_h5('cc_bitfinex_hd_1m', 'bsv_usd_1m', 'bsv_usd_1m_20170101_20200319')
 
-export_csv('cc_bitfinex_hd_1m', 'ltc_usd_1m', 'ltc_usd_1m_20170101_20200120')
-export_h5('cc_bitfinex_hd_1m', 'ltc_usd_1m', 'ltc_usd_1m_20170101_20200120')
+export_csv('cc_bitfinex_hd_1m', 'ltc_usd_1m', 'ltc_usd_1m_20170101_20200319')
+export_h5('cc_bitfinex_hd_1m', 'ltc_usd_1m', 'ltc_usd_1m_20170101_20200319')
 
-export_csv('cc_bitfinex_hd_1m', 'xrp_usd_1m', 'xrp_usd_1m_20170101_20200120')
-export_h5('cc_bitfinex_hd_1m', 'xrp_usd_1m', 'xrp_usd_1m_20170101_20200120')
+export_csv('cc_bitfinex_hd_1m', 'xrp_usd_1m', 'xrp_usd_1m_20170101_20200319')
+export_h5('cc_bitfinex_hd_1m', 'xrp_usd_1m', 'xrp_usd_1m_20170101_20200319')
+
+export_csv('cc_bitfinex_hd_1m', 'neo_usd_1m', 'xrp_usd_1m_20170101_20200319')
+export_h5('cc_bitfinex_hd_1m', 'neo_usd_1m', 'xrp_usd_1m_20170101_20200319')
+
+export_csv('cc_bitfinex_hd_1m', 'dash_usd_1m', 'xrp_usd_1m_20170101_20200319')
+export_h5('cc_bitfinex_hd_1m', 'dash_usd_1m', 'xrp_usd_1m_20170101_20200319')
+
+export_csv('cc_bitfinex_hd_1m', 'etc_usd_1m', 'xrp_usd_1m_20170101_20200319')
+export_h5('cc_bitfinex_hd_1m', 'etc_usd_1m', 'xrp_usd_1m_20170101_20200319')
